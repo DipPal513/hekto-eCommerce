@@ -1,7 +1,12 @@
 .App {
   text-align: center;
 }
-
+p,a{
+  font-family: 'Lato', sans-serif;
+}
+h1,h2,h3,h4{
+  font-family: 'Josefin Sans', sans-serif;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,7 +17,8 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/* font-family: 'Josefin Sans', sans-serif; */
+/* font-family: 'Lato', sans-serif; */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
