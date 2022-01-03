@@ -11,6 +11,8 @@ import NavbarMenu from "./Pages/Header/NavbarMenu";
 import TopBanner from "./Pages/TopBannerSlider/TopBanner";
 import FeaturedProducts from "./Pages/FeaturedProducts/FeaturedProducts";
 import LatestProduct from "./Pages/LatestProducts/LatestProduct";
+import Ouroffers from "./Pages/OurserviceOffers/Ouroffers";
+import CenterBanner from "./Pages/CenterBanner/CenterBanner";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <TopBanner/>
         <FeaturedProducts/>
       <LatestProduct/>
+        <Ouroffers/>
+        <CenterBanner/>
 
     </div>
   );
