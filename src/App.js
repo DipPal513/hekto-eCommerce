@@ -7,11 +7,19 @@ import {
   Link
 } from "react-router-dom";
 import TopHeader from "./Pages/Header/TopHeader";
+import NavbarMenu from "./Pages/Header/NavbarMenu";
+import TopBanner from "./Pages/TopBannerSlider/TopBanner";
+import FeaturedProducts from "./Pages/FeaturedProducts/FeaturedProducts";
+import LatestProduct from "./Pages/LatestProducts/LatestProduct";
 
 function App() {
   return (
     <div className="App">
       <TopHeader />
+      <NavbarMenu></NavbarMenu>
+        <TopBanner/>
+        <FeaturedProducts/>
+      <LatestProduct/>
 
     </div>
   );
