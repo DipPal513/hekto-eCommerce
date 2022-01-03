@@ -6,6 +6,7 @@ import { GiSelfLove } from "react-icons/gi";
 
 import '../../Styles/TopHeader.css'
 const TopHeader = () => {
+ 
   return (
     <div className="topHeader">
       <div className="container py-3">
@@ -21,7 +22,7 @@ const TopHeader = () => {
             </div>
           </div>
           <div className="col-lg-6 justify-content-end d-flex align-items-center">
-            <ul className="d-flex mb-0">
+            <ul className="d-flex mb-0 topBannerList">
               <li className="ms-3"><a href="#">English</a></li>
               <li className="ms-3"><a href="#">USD</a></li>
               <li className="ms-3"><a href="#">Login <AiOutlineUser /></a></li>

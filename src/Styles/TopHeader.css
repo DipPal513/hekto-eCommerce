@@ -1,4 +1,8 @@
-.topHeader{
-    background: #7e33e0;
-    color: #fff;
+.topHeader {
+  background: #7e33e0;
+  color: #fff;
+}
+.topBannerList li a {
+  text-decoration: none;
+  color: "#fff";
 }
