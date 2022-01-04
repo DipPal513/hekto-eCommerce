@@ -7,6 +7,7 @@ import { Spinner } from "react-bootstrap";
 import Pages from "./Pages/Pages/Pages";
 import NotFound from "./Pages/NotFound/NotFound";
 import ShopList from "./Pages/ShopList/ShopList";
+import ContactUspage from "./Pages/ContactusPage/ContactUspage";
 
 export const UserContext = createContext(null)
 function App() {
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route exact path='/home'>
             <Home />
+          </Route>
+          <Route exact path="/contact">
+            <ContactUspage/>
           </Route>
           <Route exact path='/pages'>
             <Pages />

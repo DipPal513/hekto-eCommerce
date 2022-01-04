@@ -33,7 +33,12 @@ const NavbarMenu = () => {
 
                 <Nav.Link href="#">Products</Nav.Link>
                 <Nav.Link href="#">Blog</Nav.Link>
-                <Nav.Link href="#">Contact</Nav.Link>
+                <Nav.Link >
+                  <Link to="/contact" className="text-decoration-none text-black">
+                    Contact
+                  </Link>
+
+                 </Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <FormControl
