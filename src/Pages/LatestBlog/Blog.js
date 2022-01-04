@@ -3,10 +3,10 @@ import { Card ,Col ,Button} from 'react-bootstrap'
 
 const Blog = ({img,title}) => {
     return (
-        <Col>
+        <Col lg={4}>
         {" "}
         <Card className='shadow rounded'>
-          <Card.Img variant="top" src={img} className='h-100' />
+          <Card.Img variant="top" src={img} className='w-100 h-100' />
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>

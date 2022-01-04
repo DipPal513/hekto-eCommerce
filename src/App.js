@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home/Home";
 import { Spinner } from "react-bootstrap";
 import Pages from "./Pages/Pages/Pages";
+import NotFound from "./Pages/NotFound/NotFound";
+import ShopList from "./Pages/ShopList/ShopList";
 
 export const UserContext = createContext(null)
 function App() {
@@ -36,6 +38,12 @@ function App() {
           </Route>
           <Route exact path='/pages'>
             <Pages />
+          </Route>
+          <Route exact path='/shopList'>
+            <ShopList />
+          </Route>
+          <Route exact path='*'>
+            <NotFound />
           </Route>
         </Switch>
       </Router>

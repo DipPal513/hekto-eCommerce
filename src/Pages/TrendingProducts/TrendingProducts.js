@@ -37,17 +37,61 @@ const TrendingProducts = () => {
         <Row className="mt-5">
           
             <Col sm={8}>
-              <div className="inner-off-section">
+             <Row>
+               <Col className="">
+               <div className="inner-off-section shadow p-3">
                 <div className="left-text">
-                  <h4>23% off in all products</h4>
-                  <button>shop now</button>
+                  <h4 style={{color:"var(--main-color)"}} className="text-capitalize">23% off in all products</h4>
+                  <a className="text-danger text-capitalize fw-bold">shop now</a>
                 </div>
-                <div className="right-img">
-                  <img src="" alt="" />
+                <div className="right-img d-flex justify-content-end">
+                  <img src="https://i.ibb.co/x116phH/imageclock.png" alt="" />
                 </div>
               </div>
+               </Col>
+               <Col>
+               <div className="inner-off-section shadow p-3 h-100">
+                <div className="left-text">
+                  <h4 style={{color:"var(--main-color)"}} className="text-capitalize">23% off in all products</h4>
+                  <a className="text-danger text-capitalize fw-bold">Explore Now</a>
+                </div>
+                <div className="right-img d-flex justify-content-end">
+                  <img src="https://i.ibb.co/7WCsVsD/imagebook.png" alt="" />
+                </div>
+              </div>
+               </Col>
+             </Row>
             </Col>
-   
+            <Col sm={4}>
+              <div className="item row d-flex align-items-center">
+               <div className="left-img col-lg-4 d-flex justify-content-center"style={{background:"lightgray"}}>
+               <img src="https://i.ibb.co/ph7xyyZ/image-20.png" className="w-75" alt="" />
+               </div>
+                <div className="right-text col-lg-8">
+                  <h5 className="text-capitalize">executive seat chair</h5>
+                  <p className="price fw-bold">$32</p>
+                </div>
+              </div>
+              <div className="item row d-flex align-items-center my-2">
+               <div className="left-img col-lg-4 d-flex justify-content-center"style={{background:"lightgray"}}>
+               <img src="https://i.ibb.co/ph7xyyZ/image-20.png" className="w-75" alt="" />
+               </div>
+                <div className="right-text col-lg-8">
+                  <h5 className="text-capitalize">executive seat chair</h5>
+                  <p className="price fw-bold">$32</p>
+                </div>
+              </div>
+              <div className="item row d-flex align-items-center">
+               <div className="left-img col-lg-4 d-flex justify-content-center"style={{background:"lightgray"}}>
+               <img src="https://i.ibb.co/ph7xyyZ/image-20.png" className="w-75" alt="" />
+               </div>
+                <div className="right-text col-lg-8">
+                  <h5 className="text-capitalize">executive seat chair</h5>
+                  <p className="price fw-bold">$32</p>
+                </div>
+              </div>
+             
+            </Col>
         </Row>
       </Container>
     </div>
