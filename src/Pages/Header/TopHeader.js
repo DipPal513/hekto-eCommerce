@@ -1,12 +1,14 @@
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
-import { AiOutlineUser,AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 import { GiSelfLove } from "react-icons/gi";
 
 import '../../Styles/TopHeader.css'
+import { Link } from "react-router-dom";
+import useFirebase from "../../hooks/useFirebase";
 const TopHeader = () => {
- 
+  const { user, logout } = useFirebase();
   return (
     <div className="topHeader">
       <div className="container py-3">
@@ -25,9 +27,19 @@ const TopHeader = () => {
             <ul className="d-flex mb-0 topBannerList">
               <li className="ms-3"><a href="#">English</a></li>
               <li className="ms-3"><a href="#">USD</a></li>
-              <li className="ms-3"><a href="#">Login <AiOutlineUser /></a></li>
+              {
+                user?.email ?
+                  <span className="mx-2" >
+                    <button onClick={logout} className="btn btn-outline-danger">LogOut <AiOutlineUser /></button></span>
+                  :
+                  <li className="ms-3"> <Link to="login">Login  <AiOutlineUser /></Link></li>
+
+              }
+
+
+
               <li className="ms-3"><a href="#">wishlist <GiSelfLove /></a></li>
-              <li className="ms-3"><a href="#"><AiOutlineShoppingCart/></a></li>
+              <li className="ms-3"><a href="#"><AiOutlineShoppingCart /></a></li>
             </ul>
           </div>
         </div>
