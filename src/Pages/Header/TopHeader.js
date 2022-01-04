@@ -1,8 +1,8 @@
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
-import { AiOutlineUser,AiOutlineShoppingCart } from "react-icons/ai";
-import { GiSelfLove } from "react-icons/gi";
+import { AiOutlineUser,AiOutlineShoppingCart,AiOutlineHeart } from "react-icons/ai";
+
 
 import '../../Styles/TopHeader.css'
 const TopHeader = () => {
@@ -26,7 +26,7 @@ const TopHeader = () => {
               <li className="ms-3"><a href="#">English</a></li>
               <li className="ms-3"><a href="#">USD</a></li>
               <li className="ms-3"><a href="#">Login <AiOutlineUser /></a></li>
-              <li className="ms-3"><a href="#">wishlist <GiSelfLove /></a></li>
+              <li className="ms-3"><a href="#">wishlist <AiOutlineHeart /></a></li>
               <li className="ms-3"><a href="#"><AiOutlineShoppingCart/></a></li>
             </ul>
           </div>
