@@ -1,27 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
+import { UserContext } from "../../App";
 
 const TrendingProducts = () => {
-  const [trendingProducts, setTrendingProducts] = useState([]);
-  const [loading, setisLoading] = useState(true);
-  useEffect(() => {
-    fetch("https://desolate-depths-52945.herokuapp.com/allproducts")
-      .then((res) => res.json())
-      .then((data) => {
-        setTrendingProducts(data);
-        setisLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return <Spinner animation="border" />;
-  }
+  const data = useContext(UserContext)
   return (
     <div className="trending-products py-5">
       <Container>
         <h2 className="text-center mb-5">Trending Products</h2>
         <Row>
-          {trendingProducts.slice(11, 15).map((trending, index) => (
+          {data.products.slice(11, 15).map((trending, index) => (
             <Col xs={1} md={3}>
               <Card
                 className="h-100 text-center p-3 shadow border-0"

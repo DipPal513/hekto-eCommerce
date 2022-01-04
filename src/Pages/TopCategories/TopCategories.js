@@ -1,21 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Col, Container, Spinner, Row, Card } from "react-bootstrap";
+import { UserContext } from "../../App";
 
 const TopCategories = () => {
-  const [topCategoriesProducts, setTopCategoriesProducts] = useState([]);
-  const [loading, setisLoading] = useState(true);
-  useEffect(() => {
-    fetch("https://desolate-depths-52945.herokuapp.com/allproducts")
-      .then((res) => res.json())
-      .then((data) => {
-        setTopCategoriesProducts(data);
-        setisLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return <Spinner animation="border" />;
-  }
+ const data = useContext(UserContext);
   return (
     <div className="topCategories">
       <Container>
@@ -23,11 +11,11 @@ const TopCategories = () => {
           className="text-center mb-5 fw-bold"
           style={{ color: "var(--text-color)" }}
         >
-          Latest Blog
+          Top Categories
         </h2>
 
         <Row>
-          {topCategoriesProducts.slice(14,18).map((product) => (
+          {data.products.slice(25,29).map((product) => (
             <Col sm={3}>
               {" "}
               <Card

@@ -1,0 +1,6 @@
+.productHeaderFilter > *{
+    color:var(--text-color) !important;
+}
+.productHeaderFilter  p{
+    font-weight: 600 !important;
+}

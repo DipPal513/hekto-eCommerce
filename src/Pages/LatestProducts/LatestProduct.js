@@ -1,27 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Card, Col, Container, Image, Row, Spinner } from "react-bootstrap";
+import { UserContext } from "../../App";
 
 const LatestProduct = () => {
-  const [latestproduct, setLatestProduct] = useState([]);
-  const [loading, setisLoading] = useState(true);
-  useEffect(() => {
-    fetch("https://desolate-depths-52945.herokuapp.com/allproducts")
-      .then((res) => res.json())
-      .then((data) => {
-        setLatestProduct(data);
-        setisLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return <Spinner animation="border" />;
-  }
+  const data = useContext(UserContext)
   return (
     <div className="mt-5">
       <h2 className="text-center pt-5 pb-5">Latest Products</h2>
       <Container>
         <Row xs={1} md={3} className="g-4">
-          {latestproduct.slice(4, 10).map((latest) => (
+          {data.products.slice(4, 10).map((latest) => (
             <Col>
               <Card className="border-0 text-center">
                 <Image

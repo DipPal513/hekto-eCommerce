@@ -22,7 +22,7 @@ function App() {
   if (loading) {
     return <Spinner animation="border" />;
   }
-  const data = 'some data show here'
+  const data = {products}
   return (
     <div className="App">
     <UserContext.Provider value={data}>
