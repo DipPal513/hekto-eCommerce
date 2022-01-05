@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Card, Col, Row, Button, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import "../../Styles/Pages.css";
 import ProductHeaderFilter from "../ProductHeaderFIlter/ProductHeaderFilter";
@@ -15,7 +16,7 @@ const Pages = () => {
           <Row>
             {data.products.slice(0,12).map((product) => (
               <Col md={3} className="mb-4">
-                <Card className="border-0 text-center h-100">
+                <Card className="border-0 text-center h-100 product-card">
                   <Card.Img variant="top" className="m-auto p-3" src={product.productImg} style={{background:"#f6f7fb"}}/>
                   <Card.Body>
                     <Card.Title style={{color:"var(--text-color)"}}>{product.productName}</Card.Title>
@@ -26,6 +27,15 @@ const Pages = () => {
                     </div>
                   <p className="fw-bold">${product.price}</p>
                   </Card.Body>
+                  <div className="hoverDiv">
+                  <Button
+                    className="hoverBtn"
+                    as={Link}
+                    to={`/productDetails/${product._id}`}
+                  >
+                    See Details
+                  </Button>
+                </div>
                 </Card>{" "}
               </Col>
             ))}

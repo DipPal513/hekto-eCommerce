@@ -1,0 +1,21 @@
+.product-card{
+    position: relative;
+    overflow: hidden;
+}
+.product-card:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+    transition: .3s;
+}
+.product-card:hover .hoverDiv{
+    
+    transition: .4s;
+    top: 5%;
+    opacity: 1;
+}
+.hoverDiv {
+    opacity: 0;
+    position: absolute;
+    left: 10%;
+    top: -105%;
+  
+}

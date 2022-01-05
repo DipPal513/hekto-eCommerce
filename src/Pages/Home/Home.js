@@ -14,8 +14,7 @@ import LatestBlog from "../LatestBlog/LatestBlog";
 const Home = () => {
   return (
     <>
-      <TopHeader />
-      <NavbarMenu />
+      
       <TopBanner />
       <FeaturedProducts />
       <LatestProduct />

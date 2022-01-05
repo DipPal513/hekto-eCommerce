@@ -26,17 +26,17 @@ const NavbarMenu = () => {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link href="#action1" className="ms-4">
+                <Nav.Link className="ms-4" as={Link} to="/">
                   Home
                 </Nav.Link>
                 <Nav.Link as={Link} to="/pages">Pages</Nav.Link>
 
                 <Nav.Link href="#">Products</Nav.Link>
                 <Nav.Link href="#">Blog</Nav.Link>
-                <Nav.Link >
-                  <Link to="/contact" className="text-decoration-none text-black">
+                <Nav.Link as={Link} to="/contact">
+          
                     Contact
-                  </Link>
+                 
 
                  </Nav.Link>
               </Nav>

@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Card, Col, Container, Image, Row, Spinner } from "react-bootstrap";
+import { Button, Card, Col, Container, Image, Row, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
-
+import '../../Styles/ProductHoverStyle.css'
 const LatestProduct = () => {
   const data = useContext(UserContext)
   return (
@@ -11,7 +12,7 @@ const LatestProduct = () => {
         <Row xs={1} md={3} className="g-4">
           {data.products.slice(4, 10).map((latest) => (
             <Col>
-              <Card className="border-0 text-center">
+              <Card className="border-0 text-center product-card">
                 <Image
                   variant="top"
                   src={latest.productImg}
@@ -24,6 +25,15 @@ const LatestProduct = () => {
                     <h6> ${latest.price}</h6>
                   </Card.Text>
                 </Card.Body>
+                <div className="hoverDiv">
+                  <Button
+                    className="hoverBtn"
+                    as={Link}
+                    to={`/productDetails/${latest._id}`}
+                  >
+                    See Details
+                  </Button>
+                </div>
               </Card>
             </Col>
           ))}

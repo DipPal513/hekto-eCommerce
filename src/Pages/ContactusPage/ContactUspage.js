@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarMenu from "../Header/NavbarMenu";
+
 import {Button, Col, Container, FloatingLabel, Form, Row} from "react-bootstrap";
 import { FcPhoneAndroid,FcAssistant,FcShipped,FcAbout,FcGlobe } from "react-icons/fc";
 
@@ -9,7 +9,7 @@ const ContactUspage = () => {
     }
     return (
         <div >
-            <NavbarMenu></NavbarMenu>
+         
             <div style={contactbg}>
                 <h2 className="pt-5 pb-5 text-center">Contact Us</h2>
             </div>

@@ -1,0 +1,8 @@
+.star-container svg{
+    width: 20px !important;
+    height: 20px !important;
+}
+.star-container{
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+}

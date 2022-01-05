@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home/Home";
-import { Spinner } from "react-bootstrap";
+import { Card, Spinner } from "react-bootstrap";
 import Pages from "./Pages/Pages/Pages";
 import NotFound from "./Pages/NotFound/NotFound";
 import ShopList from "./Pages/ShopList/ShopList";
@@ -12,6 +12,10 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 
 import ContactUspage from "./Pages/ContactusPage/ContactUspage";
+import NavbarMenu from "./Pages/Header/NavbarMenu";
+import TopHeader from "./Pages/Header/TopHeader";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import Cart from "./Cart/Cart";
 
 
 export const UserContext = createContext(null)
@@ -36,6 +40,8 @@ function App() {
 
     <UserContext.Provider value={data}>
     <Router>
+    <TopHeader />
+      <NavbarMenu />
         <Switch>
           <Route exact path='/'>
             <Home />
@@ -51,6 +57,15 @@ function App() {
           </Route>
           <Route exact path='/shopList'>
             <ShopList />
+          </Route>
+          <Route exact path='/cart/:id'>
+            <Cart />
+          </Route>
+          <Route exact path='/productDetails/:id'>
+            <ProductDetails />
+          </Route>
+          <Route exact path='/login'>
+            <Login />
           </Route>
           <Route exact path='*'>
             <NotFound />

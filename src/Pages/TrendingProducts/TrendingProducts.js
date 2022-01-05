@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 
 const TrendingProducts = () => {
@@ -12,7 +13,7 @@ const TrendingProducts = () => {
           {data.products.slice(11, 15).map((trending, index) => (
             <Col xs={1} md={3}>
               <Card
-                className="h-100 text-center p-3 shadow border-0"
+                className="h-100 text-center p-3 shadow border-0 product-card"
                 style={{ background: "#fff" }}
               >
                 <Card.Img
@@ -28,6 +29,15 @@ const TrendingProducts = () => {
                     ${trending.price}.00
                   </Card.Text>
                 </Card.Body>
+                <div className="hoverDiv">
+                  <Button
+                    className="hoverBtn"
+                    as={Link}
+                    to={`/productDetails/${trending._id}`}
+                  >
+                    See Details
+                  </Button>
+                </div>
               </Card>
             </Col>
           ))}
