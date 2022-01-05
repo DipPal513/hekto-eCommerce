@@ -16,6 +16,8 @@ import NavbarMenu from "./Pages/Header/NavbarMenu";
 import TopHeader from "./Pages/Header/TopHeader";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Cart from "./Cart/Cart";
+import Footer from "./Footer/Footer";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 
 export const UserContext = createContext(null)
@@ -61,9 +63,9 @@ function App() {
           <Route exact path='/cart/:id'>
             <Cart />
           </Route>
-          <Route exact path='/productDetails/:id'>
+          <PrivateRoute exact path='/productDetails/:id'>
             <ProductDetails />
-          </Route>
+          </PrivateRoute>
           <Route exact path='/login'>
             <Login />
           </Route>
@@ -71,6 +73,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </UserContext.Provider>
       

@@ -36,7 +36,7 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="row align-items-center justify-content-center mt-5">
+      <div className="row align-items-center justify-content-center my-5 ">
         <div className="col-lg-2 col-md-4 col-sm-8 shadow">
         <h1 className=" fw-bolder text-center mb-5">Log In</h1>
           <form onSubmit={handleLoginSubmit} className="text-center">

@@ -24,7 +24,7 @@ const ProductDetails = () => {
   return (
     <div className="productDetails">
       <Container>
-        <Row className="py-5 mt-5 shadow">
+        <Row className="py-5 my-5 shadow">
           <Col
             md={5}
             className="d-flex align-items-center justify-content-center"
