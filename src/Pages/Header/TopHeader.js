@@ -1,8 +1,12 @@
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
+
 import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 import { GiSelfLove } from "react-icons/gi";
+
+import { AiOutlineUser,AiOutlineShoppingCart,AiOutlineHeart } from "react-icons/ai";
+
 
 import '../../Styles/TopHeader.css'
 import { Link } from "react-router-dom";
@@ -27,6 +31,7 @@ const TopHeader = () => {
             <ul className="d-flex mb-0 topBannerList">
               <li className="ms-3"><a href="#">English</a></li>
               <li className="ms-3"><a href="#">USD</a></li>
+
               {
                 user?.email ?
                   <span className="mx-2" >
@@ -40,6 +45,8 @@ const TopHeader = () => {
 
               <li className="ms-3"><a href="#">wishlist <GiSelfLove /></a></li>
               <li className="ms-3"><a href="#"><AiOutlineShoppingCart /></a></li>
+
+        
             </ul>
           </div>
         </div>

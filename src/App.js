@@ -7,8 +7,12 @@ import { Spinner } from "react-bootstrap";
 import Pages from "./Pages/Pages/Pages";
 import NotFound from "./Pages/NotFound/NotFound";
 import ShopList from "./Pages/ShopList/ShopList";
+
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+
+import ContactUspage from "./Pages/ContactusPage/ContactUspage";
+
 
 export const UserContext = createContext(null)
 function App() {
@@ -29,33 +33,32 @@ function App() {
   const data = { products }
   return (
     <div className="App">
-      <UserContext.Provider value={data}>
-        <Router>
-          <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route exact path='/home'>
-              <Home />
-            </Route>
-            <Route exact path='/pages'>
-              <Pages />
-            </Route>
-            <Route exact path='/shopList'>
-              <ShopList />
-            </Route>
-            <Route exact path='/login'>
-              <Login />
-            </Route>
-            <Route exact path='/register'>
-              <Register />
-            </Route>
-            <Route exact path='*'>
-              <NotFound />
-            </Route>
-          </Switch>
-        </Router>
-      </UserContext.Provider>
+
+    <UserContext.Provider value={data}>
+    <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route exact path='/home'>
+            <Home />
+          </Route>
+          <Route exact path="/contact">
+            <ContactUspage/>
+          </Route>
+          <Route exact path='/pages'>
+            <Pages />
+          </Route>
+          <Route exact path='/shopList'>
+            <ShopList />
+          </Route>
+          <Route exact path='*'>
+            <NotFound />
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
+      
 
     </div>
   );

@@ -1,0 +1,16 @@
+.dots span{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+}
+.dots span:first-child{
+    background: #d38a38;
+}
+.dots span:last-child{
+    background: #f748a8;
+}
+.dots span:nth-child(2){
+    background: #f748a8;
+    
+}

@@ -23,9 +23,11 @@ ul{
 .spinner-border{
   margin-left: 50%;
 }
-h1,h2,h3{
+h1,h2,h3,h4,h5,.price{
   color: var(--text-color) !important;
+  font-family: 'Josefin Sans', sans-serif !important;
 }
+
 .carousel-control-prev,
 .carousel-control-next{
   display: none !important;
