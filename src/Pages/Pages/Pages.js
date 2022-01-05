@@ -3,10 +3,12 @@ import { Card, Col, Row, Button, Container } from "react-bootstrap";
 import { UserContext } from "../../App";
 import "../../Styles/Pages.css";
 import ProductHeaderFilter from "../ProductHeaderFIlter/ProductHeaderFilter";
+import NavbarMenu from "../Header/NavbarMenu";
 const Pages = () => {
   const data = useContext(UserContext);
   return (
     <div className="pages">
+        <NavbarMenu/>
       <Container>
      
           <ProductHeaderFilter />

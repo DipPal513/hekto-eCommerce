@@ -17,7 +17,11 @@ const NavbarMenu = () => {
         <Navbar expand="lg">
           <Container fluid>
             <Navbar.Brand href="#">
-              <h3>Hekto</h3>
+              <Link to="/" className="text-decoration-none text-black pt-2">
+                <h3>Hekto</h3>
+              </Link>
+
+
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
@@ -26,7 +30,7 @@ const NavbarMenu = () => {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link href="#action1" className="ms-4">
+                <Nav.Link as={Link} to="/" className="ms-4">
                   Home
                 </Nav.Link>
                 <Nav.Link as={Link} to="/pages">Pages</Nav.Link>

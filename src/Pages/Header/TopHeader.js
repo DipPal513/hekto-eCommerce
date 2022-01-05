@@ -2,7 +2,7 @@ import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
 
-import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
+// import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 import { GiSelfLove } from "react-icons/gi";
 
 import { AiOutlineUser,AiOutlineShoppingCart,AiOutlineHeart } from "react-icons/ai";

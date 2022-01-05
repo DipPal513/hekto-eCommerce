@@ -11,6 +11,7 @@ import TrendingProducts from "../TrendingProducts/TrendingProducts";
 import TopHeader from "../Header/TopHeader";
 import NavbarMenu from "../Header/NavbarMenu";
 import LatestBlog from "../LatestBlog/LatestBlog";
+import Footer from "../FooterComponent/Footer";
 const Home = () => {
   return (
     <>
@@ -25,7 +26,9 @@ const Home = () => {
       <Discount />
       <TopCategories />
       <Newslater />
+        <img src="https://i.ibb.co/Q6M5wxV/bannerbottom.png" className="img-fluid"/>
       <LatestBlog />
+        <Footer/>
     </>
   );
 };
