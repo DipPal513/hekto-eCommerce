@@ -18,6 +18,10 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Cart from "./Cart/Cart";
 import Footer from "./Footer/Footer";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import BlogsPage from "./Pages/Blogpage/BlogsPage";
+import Pagesshoplist from "./Pages/Pages/Pagesshoplist";
+import AuthProvider from "./Contexts/AuthProvider";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 
 export const UserContext = createContext(null)
@@ -39,7 +43,7 @@ function App() {
   const data = { products }
   return (
     <div className="App">
-
+    <AuthProvider>
     <UserContext.Provider value={data}>
     <Router>
     <TopHeader />
@@ -54,16 +58,25 @@ function App() {
           <Route exact path="/contact">
             <ContactUspage/>
           </Route>
-          <Route exact path='/pages'>
+          <Route exact path='/products'>
             <Pages />
+          </Route>
+          <Route exact path='/pages'>
+            <Pagesshoplist />
           </Route>
           <Route exact path='/shopList'>
             <ShopList />
           </Route>
+          <Route exact path='/blogs'>
+            <BlogsPage />
+          </Route>
           <Route exact path='/cart/:id'>
             <Cart />
           </Route>
-          <PrivateRoute exact path='/productDetails/:id'>
+          <Route path="/dashboard">
+            <Dashboard/>
+          </Route>
+          <PrivateRoute  path='/productDetails/:id'>
             <ProductDetails />
           </PrivateRoute>
           <Route exact path='/login'>
@@ -76,7 +89,7 @@ function App() {
         <Footer />
       </Router>
     </UserContext.Provider>
-      
+    </AuthProvider>
 
     </div>
   );

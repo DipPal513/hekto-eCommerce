@@ -18,7 +18,7 @@ const ProductDetails = () => {
     price,
     description,
     category,
-    color,
+    Color,productCode
   } = product;
 
   return (
@@ -44,19 +44,19 @@ const ProductDetails = () => {
             </div>
             <p className="text-info fw-bold mt-2">${price}</p>
             <div className="d-flex">
-                <p className="fw-bold">Color</p>
-                <p className="fw-bold">{color}</p>
+                <p className="fw-bold">Color: </p>
+                <p className="fw-bold">{Color}</p>
             </div>
             <p className="text-muted">
              {description}
             </p>
             <div className="d-flex align-items-center ">
-             <Button as={Link} to={`/cart/${id}`} className="bg-transparent border-0 text-dark fw-bold me-4">Add To Cart</Button>
-                <BsHeart />
+             <Button as={Link} to={`/cart/${id}`} variant="outline-danger" >Add To Cart</Button>
+                <BsHeart className="ms-2" />
             </div>
             <div className="mt-3">
-              <p className="fw-bold">Categories</p>
-              <p className="fw-bold">Tags</p>
+              <p className="fw-bold">Categories: {category}</p>
+              <p className="fw-bold">Product Code: {productCode}</p>
               <p className="fw-bold">Share</p>
             </div>
           </Col>
