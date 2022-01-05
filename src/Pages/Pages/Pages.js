@@ -4,6 +4,7 @@ import { UserContext } from "../../App";
 import "../../Styles/Pages.css";
 import ProductHeaderFilter from "../ProductHeaderFIlter/ProductHeaderFilter";
 import NavbarMenu from "../Header/NavbarMenu";
+import Footer from "../FooterComponent/Footer";
 const Pages = () => {
   const data = useContext(UserContext);
   return (
@@ -15,7 +16,7 @@ const Pages = () => {
   
         <div className="pages-products my-5">
           <Row>
-            {data.products.slice(0,12).map((product) => (
+            {data.products.map((product) => (
               <Col md={3} className="mb-4">
                 <Card className="border-0 text-center h-100">
                   <Card.Img variant="top" className="m-auto p-3" src={product.productImg} style={{background:"#f6f7fb"}}/>
@@ -34,6 +35,7 @@ const Pages = () => {
           </Row>
         </div>
       </Container>
+        <Footer/>
     </div>
   );
 };

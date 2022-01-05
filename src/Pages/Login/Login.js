@@ -5,6 +5,9 @@ import useFirebase from '../../hooks/useFirebase';
 import TopHeader from '../Header/TopHeader';
 import { useHistory, useLocation } from 'react-router';
 import img from "./login.jpg"
+import NavbarMenu from "../Header/NavbarMenu";
+import Footer from "../FooterComponent/Footer";
+import {Button, Container, Form} from "react-bootstrap";
 const Login = () => {
 
     const history = useHistory();
@@ -41,17 +44,29 @@ const Login = () => {
 
         <div>
             <TopHeader />
+            <NavbarMenu/>
+            <Container>
             <div className="row">
-                <div className="col-md-6">
-                    <form onSubmit={handleLoginSubmit} className="text-center">
+                <div className="col-md-6 ">
+                    <Form onSubmit={handleLoginSubmit} className="text-center">
                         <h1 className="p-5 fw-bolder text-success">Log In your Account</h1>
-                        <input onChange={handleEmail} className="m-3" type="email" name="email" placeholder="Type Your Email" /><br />
-                        <input onChange={handlePassword} className=" mb-2" type="password" name="Password" placeholder="Password" /><br />
-                        <button type="submit" className="btn btn-outline-success mb-4">Log in</button>
+                        <Form.Group className="mb-3" onChange={handleEmail}  controlId="formBasicEmail">
+
+                            <Form.Control type="email" placeholder="Enter email" />
+
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Control type="password" onChange={handlePassword} placeholder="Password" />
+                        </Form.Group>
+
+
+            <Button variant="outline-success" className="w-50" type="submit" >Log In</Button>
+
+
                         <p className="fw-bold text-success">New User ? <Link to="/register"> <button className="btn btn-outline-success mt-1">Register</button> </Link> </p>
 
                         <button type="submit" className="btn btn-outline-success mb-4" onClick={handleGoogle} >LoginWithGoogle</button>
-                    </form>
+                    </Form>
                 </div>
 
                 <div className="col-md-6">
@@ -61,6 +76,8 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            </Container>
+            <Footer/>
         </div>
     );
 };

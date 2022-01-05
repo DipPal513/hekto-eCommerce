@@ -15,11 +15,11 @@ const LatestBlog = () => {
         <Row>
           <Blog
             title="Top essential Trends in 2021"
-            img="https://i.ibb.co/jzL64jN/2dc-Yhvb-HV-M.png"
+            img="https://i.ibb.co/7K3JQpN/blogimg1.png"
           />
           <Blog
             title="Top essential Trends in 2021"
-            img="https://i.ibb.co/jzL64jN/2dc-Yhvb-HV-M.png"
+            img="https://i.ibb.co/yqKCQJn/blogimg2.png"
           />
           <Blog
             title="Top essential Trends in 2021"

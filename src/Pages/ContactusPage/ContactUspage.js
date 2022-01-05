@@ -2,6 +2,7 @@ import React from 'react';
 import NavbarMenu from "../Header/NavbarMenu";
 import {Button, Col, Container, FloatingLabel, Form, Row} from "react-bootstrap";
 import { FcPhoneAndroid,FcAssistant,FcShipped,FcAbout,FcGlobe } from "react-icons/fc";
+import Footer from "../FooterComponent/Footer";
 
 const ContactUspage = () => {
     const contactbg={
@@ -98,6 +99,7 @@ const ContactUspage = () => {
                     </Col>
                 </Row>
             </Container>
+            <Footer/>
         </div>
     );
 };

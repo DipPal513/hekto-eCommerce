@@ -37,7 +37,7 @@ const TopHeader = () => {
                   <span className="mx-2" >
                     <button onClick={logout} className="btn btn-outline-danger">LogOut <AiOutlineUser /></button></span>
                   :
-                  <li className="ms-3"> <Link to="login">Login  <AiOutlineUser /></Link></li>
+                  <li className="ms-3"> <Link to="/login">Login  <AiOutlineUser /></Link></li>
 
               }
 

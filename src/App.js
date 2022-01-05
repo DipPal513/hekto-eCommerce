@@ -12,6 +12,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 
 import ContactUspage from "./Pages/ContactusPage/ContactUspage";
+import NavbarMenu from "./Pages/Header/NavbarMenu";
 
 
 export const UserContext = createContext(null)
@@ -36,6 +37,7 @@ function App() {
 
     <UserContext.Provider value={data}>
     <Router>
+
         <Switch>
           <Route exact path='/'>
             <Home />
@@ -52,6 +54,11 @@ function App() {
           <Route exact path='/shopList'>
             <ShopList />
           </Route>
+
+          <Route exact path='/login'>
+            <Login />
+          </Route>
+
           <Route exact path='*'>
             <NotFound />
           </Route>

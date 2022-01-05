@@ -2,6 +2,8 @@ import React from "react";
 import { Container,Row,Col } from "react-bootstrap";
 import ProductHeaderFilter from "../ProductHeaderFIlter/ProductHeaderFilter";
 import ShopItem from "./ShopItem";
+import NavbarMenu from "../Header/NavbarMenu";
+import Footer from "../FooterComponent/Footer";
 
 const ShopList = () => {
   const data = [
@@ -36,6 +38,7 @@ const ShopList = () => {
   ];
   return (
     <div className="shopList">
+      <NavbarMenu/>
       <Container>
         <ProductHeaderFilter />
         <Row className="">
@@ -44,6 +47,7 @@ const ShopList = () => {
           ))}
         </Row>
       </Container>
+      <Footer/>
     </div>
   );
 };

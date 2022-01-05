@@ -33,9 +33,9 @@ const NavbarMenu = () => {
                 <Nav.Link as={Link} to="/" className="ms-4">
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to="/pages">Pages</Nav.Link>
+                <Nav.Link as={Link} to="/pages">Products</Nav.Link>
 
-                <Nav.Link href="#">Products</Nav.Link>
+                <Nav.Link as={Link} to="/shopList">Pages</Nav.Link>
                 <Nav.Link href="#">Blog</Nav.Link>
                 <Nav.Link >
                   <Link to="/contact" className="text-decoration-none text-black">
