@@ -29,10 +29,10 @@ const NavbarMenu = () => {
                 <Nav.Link className="ms-4" as={Link} to="/">
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to="/pages">Pages</Nav.Link>
+                <Nav.Link as={Link} to="/products">Products</Nav.Link>
 
-                <Nav.Link href="#">Products</Nav.Link>
-                <Nav.Link href="#">Blog</Nav.Link>
+                <Nav.Link as={Link} to="/pages">Pages</Nav.Link>
+                <Nav.Link as={Link} to="/blogs">Blog</Nav.Link>
                 <Nav.Link as={Link} to="/contact">
           
                     Contact

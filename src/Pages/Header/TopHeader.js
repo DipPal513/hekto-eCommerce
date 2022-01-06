@@ -13,6 +13,7 @@ import {
 import "../../Styles/TopHeader.css";
 import { Link } from "react-router-dom";
 import useFirebase from "../../hooks/useFirebase";
+import {Button} from "react-bootstrap";
 const TopHeader = () => {
   const { user, logout } = useFirebase();
   return (
@@ -40,9 +41,13 @@ const TopHeader = () => {
 
               {user?.email ? (
                 <span className="mx-2">
-                  <button onClick={logout} className="btn btn-outline-danger">
+                  <Button onClick={logout} variant="danger">
                     LogOut <AiOutlineUser />
-                  </button>
+                  </Button>
+
+                  <Button variant="success" className="ms-2"><Link to="/dashboard" className="text-decoration-none text-white">
+                    Dashboard
+                  </Link></Button>
                 </span>
               ) : (
                 <li className="ms-3">
