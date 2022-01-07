@@ -11,7 +11,7 @@ const TrendingProducts = () => {
         <h2 className="text-center mb-5">Trending Products</h2>
         <Row>
           {data.products.slice(11, 15).map((trending, index) => (
-            <Col xs={1} md={3}>
+            <Col lg={3} md={5} xs={12} className="mb-3">
               <Card
                 className="h-100 text-center p-3 shadow border-0 product-card"
                 style={{ background: "#fff" }}

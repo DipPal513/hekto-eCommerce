@@ -43,6 +43,7 @@ const Discount = () => {
             <img
               src="https://i.ibb.co/mbqnSBW/Group54.png?fbclid=IwAR1ecO0JJ68tXnYcCHOgUJ39lwcE3a_Ee7RwnhH-MuftXeYDiRTy4R_etn8"
               alt=""
+              className='img-fluid'
             />
           </Col>
         </Row>
